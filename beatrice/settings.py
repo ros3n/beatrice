@@ -122,6 +122,11 @@ REST_FRAMEWORK = {
     )
 }
 
+from os import environ
+
+GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
+GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
+
 try:
     from local_settings import *
 except ImportError:
