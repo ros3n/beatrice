@@ -2,10 +2,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    # Examples:
-    # url(r'^$', 'beatrice.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     url(r'^api/accounts/', include('accounts.urls')),
+    url(r'^api/tasks/', include('tasks.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
