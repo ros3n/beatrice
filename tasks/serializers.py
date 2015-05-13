@@ -14,7 +14,7 @@ class TaskSerializer(ModelSerializer):
         model = Task
         fields = (
             'name', 'description', 'status', 'point', 'radius',
-            'category',
+            'category', 'user',
         )
         read_only_fields = ('notifications',)
 
