@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'beatrice.wsgi.application'
 import dj_database_url
 
 DATABASES = { 'default': dj_database_url.config() }
-DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
+# DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
@@ -126,6 +126,8 @@ from os import environ
 
 GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
 GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
+
+PLACES_SEARCH_RADIUS = 70
 
 try:
     from local_settings import *
