@@ -126,8 +126,10 @@ from os import environ
 
 GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
 GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
+GOOGLE_API_KEY = environ.get('GOOGLE_API_KEY')
 
 PLACES_SEARCH_RADIUS = 70
+
 
 try:
     from local_settings import *
