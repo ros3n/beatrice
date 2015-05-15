@@ -13,7 +13,7 @@ class TaskSerializer(ModelSerializer):
     class Meta:
         model = Task
         fields = (
-            'name', 'description', 'status', 'point', 'radius',
+            'name', 'description', 'status', 'radius',
             'category', 'user',
         )
         read_only_fields = ('notifications',)
