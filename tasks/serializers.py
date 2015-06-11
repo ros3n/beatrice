@@ -6,14 +6,14 @@ from tasks.models import Category, Task, Notification
 class CategorySerializer(ModelSerializer):
     class Meta:
         model = Category
-        fields = ('name',)
+        fields = ('id', 'name', 'code')
 
 
 class TaskSerializer(ModelSerializer):
     class Meta:
         model = Task
         fields = (
-            'name', 'description', 'status', 'radius',
+            'id', 'name', 'description', 'status', 'radius',
             'category', 'user',
         )
         read_only_fields = ('notifications',)
